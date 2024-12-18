@@ -39,7 +39,7 @@ export default function AjouterFormation(props) {
     e.preventDefault();
 
     axios
-      .post('https://backend-formation-m3j0.onrender.com/api/formation', formData)
+      .post('https://backend-formation-m3j0.onrender.com/api/formation/', formData)
       .then((response) => {
         alert('Formation ajoutée avec succès!');
         setFormData({

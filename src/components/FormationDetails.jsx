@@ -31,7 +31,6 @@ export default function FormationDetails(props) {
         .delete(`https://backend-formation-m3j0.onrender.com/api/formation/${id}`)
         .then(() => {
           alert('Formation supprimée avec succès');
-          navigate('/'); // Redirige après suppression
         })
         .catch((error) => {
           alert('Erreur lors de la suppression');
@@ -161,7 +160,8 @@ export default function FormationDetails(props) {
                   className="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700"
                   onClick={supprimerFormation}
                 >
-                  Supprimer
+                  
+                  <Link to="/">supprimer</Link>
                 </button>
               </div>
             </div>
